@@ -8,7 +8,7 @@ psycopg2==2.5.3
 pystache==0.5.4
 static==1.0.2
 wsgiref==0.1.2
-Pillow==2.0.0
+Pillow
 South==0.8.4
 cmsplugin-filer==0.9.5
 django-classy-tags==0.5
