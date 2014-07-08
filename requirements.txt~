@@ -8,6 +8,7 @@ psycopg2==2.5.3
 pystache==0.5.4
 static==1.0.2
 wsgiref==0.1.2
+djangocms_inherit
 Pillow==2.0.0
 South==0.8.4
 cmsplugin-filer==0.9.5

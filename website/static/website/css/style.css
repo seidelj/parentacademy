@@ -1,0 +1,330 @@
+html {
+    font-size: 100%;
+}
+body { 
+    padding-top: 30px;
+	padding-bottom: 20px;
+    color: #505052;
+    font-family: 'PT Sans', sans-serif;	
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+.btn {
+    display: inline !important;
+    border-radius: 0px;
+    text-align: left;
+    white-space: initial;
+}
+
+.btn:focus {
+    outline: 0;
+}
+.white, .white a {
+    color: #fff
+}
+.hidden-xs {
+    display: inline-block !important;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/*Navbar*/
+.navbar-default {
+    background-color: #505052;
+	border-color: #505052;
+    min-height:32px !important;
+    font-size: 1rem;
+}
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+    padding-top:7px !important;
+    padding-bottom:7px !important;
+    font-size: 0.8rem;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #acacac;
+}
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #ecf0f1;
+    padding-top:7px !important;
+    padding-bottom:7px !important;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #acacac;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #acacac;
+	background-color: #505052;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #acacac;
+	background-color: #505052;
+}
+.navbar-default .navbar-toggle {
+	border-color: #505052;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #505052;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+	color: #acacac;
+}
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media (min-width:768px) and (max-width: 979px) {
+    body {
+        font-size: 1rem;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #acacac;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #acacac;
+		background-color: #505052;
+	}
+
+    body {
+        font-size: 1rem;
+    }
+    .hidden-xs {
+        display: none !important;
+    }
+
+
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+.logo {
+   padding-left: 15px !important;
+}
+
+.roundbottomright {
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+}
+
+.blockcontent {
+    margin-left: 0px !important;
+    padding-right: 10px;
+    padding-top: 0px !important;
+    font-size: 1rem;
+}
+
+.schedule {
+align: center;
+text-align: right;
+margin-left: 15px !important;
+margin-right: 15px !important;
+}
+
+.place-name-schedule {
+font-size: 2rem !important;
+
+}
+
+.schedule-header {
+font-size: 1.5rem !important;
+}
+
+.footer .col-sm-4 {
+    text-align: left !important;
+    margin-left: 15px;
+}
+}
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 5px 5px;
+	margin-top: 8px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+    }
+
+.navbar-toggle .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+    }
+
+.navbar-toggle .icon-bar+.icon-bar {
+	margin-top: 4px;
+    }
+
+/* END */
+
+.navbar-right {
+	padding-right: 20px;
+    padding-left: 20px;
+    }
+.logo {
+   padding-top: 30px;
+   padding-left: 80px;
+   padding-bottom: 30px;
+}
+
+.roundbottomright {
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+.home-img {
+    padding-bottom: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 100%;
+    float: left;
+}
+.home-img img {
+    -moz-border-bottom-right-radius: 60px; 
+    -webkit-border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+
+.btn-Camden {
+    font-family: 'PT Sans';
+    font-weight: bold;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1ca6bc;
+    -moz-border-bottom-right-radius: 60px;
+    -webkit-border-bottom-right-radius: 60px;
+    border-bottom-right-radius:60px;
+}
+.btn-Camden:hover {
+    background-color: #1fbfcd;
+   } 
+.btn-Camden a{
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-decoration: bold;
+}
+
+
+.btn-Camden a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.btn-Middles {
+    font-family: 'PT Sans';
+    font-weight: bold;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #87be62;
+    -moz-border-bottom-right-radius: 60px;
+    -webkit-border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.btn-Middles a {
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.btn-Middles:hover {
+    background-color: #92c470;
+}
+
+.btn-Middles a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.blockcontent {
+    margin-left: 145px;
+    padding-right: 10px;
+    padding-top: 40px;
+    font-size: 1rem;
+}
+    
+.colorbanner {
+    padding-top:5px;
+    text-align: left;
+    padding-left: 5px;
+    -moz-border-bottom-right-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+} 
+.colorbanner p {
+    size: 0.8em;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+.schedule {
+align: center;
+text-align: right;
+margin-left: 145px;
+margin-right: 90px;
+}
+
+.place-name-schedule {
+font-size: 3rem;
+font-weight: bold;
+}
+
+.schedule-header {
+font-size: 2rem;
+}
+.footer {
+   font-size: 0.8rem; 
+   
+}
+
+.footer .col-sm-4 {
+    text-align: center;
+}
+.col-md-6 {
+    text-align: left;
+    margin-bottom: 20px;
+    }
+
+		
+
+
