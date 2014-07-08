@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangocms_text_ckeditor',
     'cms',  # django CMS itself
     'mptt',  # utilities for implementing a modified pre-order traversal tree
     'menus',  # helper for model independent hierarchical website navigation
@@ -47,6 +48,15 @@ INSTALLED_APPS = (
     'sekizai',  # for javascript and css management
     'django.contrib.messages',  # to enable messages framework (see :ref:`Enable messages <enable-messages>`)
     'django.contrib.sites',
+    'djangocms_file',
+    'djangocms_flash',
+    'djangocms_googlemap',
+    'djangocms_inherit',
+    'djangocms_picture',
+    'djangocms_teaser',
+    'djangocms_video',
+    'djangocms_link',
+    'djangocms_snippet',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -146,6 +156,9 @@ TEMPLATE_DIRS = (
 
 CMS_TEMPLATES = (
     ('home.html', "Home Page"),
+    ('about.html', "General Info"),
+    ('schedule_camden.html', "Camden Schedule"),
+    ('schedule_middlesbrough.html', "Middlesbrough Schedule"),
 )
 
 LANGUAGES = [

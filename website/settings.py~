@@ -119,8 +119,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
+
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
@@ -147,6 +146,9 @@ TEMPLATE_DIRS = (
 
 CMS_TEMPLATES = (
     ('home.html', "Home Page"),
+    ('about.html', "General Info"),
+    ('schedule_camden.html', "Camden Schedule"),
+    ('schedule_middlesbrough.html', "Middlesbrough Schedule"),
 )
 
 LANGUAGES = [
