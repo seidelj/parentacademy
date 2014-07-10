@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^calender/', include('calender.urls', namespace='calender')),
     url(r'^', include('cms.urls')),
 )
 

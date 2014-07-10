@@ -1,0 +1,11 @@
+from django.shortcuts import render
+from calender.models import Events
+from django.http import Http404
+
+# Create your views here.
+def schedule(request, campus):
+	events_list = Events.objects.filter(campus=campus).order_by('-date')[:5]
+	if not events_list:
+		raise Http404
+	context = {'events': events_list,}
+	return render(request, 'calender/schedule.html', context)

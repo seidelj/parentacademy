@@ -59,6 +59,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'djangocms_link',
     'djangocms_snippet',
+    'calender',
+    'djangocms_calender',
 )
 
 MIDDLEWARE_CLASSES = (
