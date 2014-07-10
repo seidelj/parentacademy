@@ -4,8 +4,11 @@ from django.http import Http404
 
 # Create your views here.
 def schedule(request, campus):
-	events_list = Events.objects.filter(campus=campus).order_by('-date')[:5]
-	if not events_list:
+	message = "No upcoming events"
+	if campus != "c" and campus != "m":
 		raise Http404
-	context = {'events': events_list,}
-	return render(request, 'calender/schedule.html', context)
+	name = "Camden" if campus == "c" else "Middlesbrough"
+	events_list = Events.objects.filter(campus=campus).order_by('date')[-5:]
+	noEvents = True if not events_list else False
+	context = { 'events': events_list, 'noEvents': noEvents, 'message': message, 'name': name, }
+	return render(request, 'calender/base.html', context)

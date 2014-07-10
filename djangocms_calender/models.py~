@@ -5,7 +5,12 @@ from calender.models import Events
 # THIS IS SOME CMS STUFF
 
 class CalenderPlugin(CMSPlugin):
-	events = models.ForeignKey('Events', related_name='plugins')
+	events = models.ForeignKey(Events)
 
 	def __unicode__(self):
 		return self.events.title
+
+	class Meta:
+		verbose_name = 'Event'	
+		verbose_name_plural = "Events"
+

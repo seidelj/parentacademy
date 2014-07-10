@@ -16,7 +16,7 @@
         	</tr>
 		{% for event in events %}
         	<tr>
-            		<td>{{ event.date|date:"l" }}, {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
+            		<td>{{ event.date|date:"l" }} {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
             		<td>{{ event.title }}</td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 		</tr>

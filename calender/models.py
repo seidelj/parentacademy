@@ -15,4 +15,10 @@ class Events(models.Model):
 	title = models.CharField("Event Title", max_length=256)
 	description = models.TextField("Event Description")
 
+	def __unicode__(self):
+		return self.title
+
+	class Meta:
+		verbose_name = 'Event'	
+		verbose_name_plural = "Events"
 

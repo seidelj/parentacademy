@@ -7,7 +7,8 @@ def schedule(request, campus):
 	message = "No upcoming events"
 	if campus != "c" and campus != "m":
 		raise Http404
-	events_list = Events.objects.filter(campus=campus).order_by('-date')[:5]
+	name = "Camden" if campus == "c" else "Middlesbrough"
+	events_list = Events.objects.filter(campus=campus).order_by('date')[:5]
 	noEvents = True if not events_list else False
-	context = {'events': events_list, 'noEvents': noEvents, 'message': message, }
+	context = { 'events': events_list, 'noEvents': noEvents, 'message': message, 'name': name, }
 	return render(request, 'calender/base.html', context)

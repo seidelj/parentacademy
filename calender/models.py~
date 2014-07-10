@@ -15,10 +15,10 @@ class Events(models.Model):
 	title = models.CharField("Event Title", max_length=256)
 	description = models.TextField("Event Description")
 
-# THIS IS SOME CMS STUFF
-
-class CalenderPlugin(CMSPlugin):
-	events = models.ForeignKey('Events', related_name='plugins')
-
 	def __unicode__(self):
-		return self.events.title
+		return self.title
+
+	class Meta:
+		verbose_name = 'Event'	
+		verbose_name_plural = "Events"
+

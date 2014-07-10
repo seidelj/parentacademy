@@ -9,3 +9,5 @@ class CalenderPlugin(CMSPlugin):
 
 	def __unicode__(self):
 		return self.events.title
+
+	

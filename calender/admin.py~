@@ -5,7 +5,9 @@ from calender.models import Events
 
 
 class EventsAdmin(admin.ModelAdmin):
-	
+	class Meta:		
+		verbose_name_plural = "Events"
+
 	fieldsets = [
 	    ("Event Information", {'fields': ['title', 'description']}),
 	    (None,		{'fields': ['campus']}),
