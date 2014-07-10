@@ -1,8 +1,8 @@
 <div class="schedule">
 	<span class="place-name-schedule">{{ name }}</span>
     	<span class="schedule-header">Schedule</span>
-    	<hr style="margin-top: 0px; margin-bottom: 7px; border: none; height: 2px; color: #505052; background-color:#505052; ">
-    	<div class="colorbanner" style="background-color:#1ca6bc">
+    	<hr style="margin-top: 0px; margin-bottom: 7px; border: none; height: 2px; color: #505052; background-color:#505052;">
+    	<div class="colorbanner" style={% if name == 'Camden' %}"background-color:#1ca6bc"{% else %}background-color:#87be62;{% endif %}">
         	<p>{{ events.0.date|date:"Y" }}&nbsp;</p>
     	</div>
     	<div class="table-responsive">
@@ -16,7 +16,7 @@
         	</tr>
 		{% for event in events %}
         	<tr>
-            		<td>{{ event.date|date:"l" }} {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
+            		<td>{{ event.date|date:"l" }}, {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
             		<td>{{ event.title }}</td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 		</tr>
