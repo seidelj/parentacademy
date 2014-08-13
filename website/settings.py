@@ -163,6 +163,7 @@ CMS_TEMPLATES = (
     ('about.html', "General Info"),
     ('schedule_camden.html', "Camden Schedule"),
     ('schedule_middlesbrough.html', "Middlesbrough Schedule"),
+    ('directors.html', "Directors"),
 )
 
 LANGUAGES = [
