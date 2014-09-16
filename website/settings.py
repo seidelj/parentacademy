@@ -61,6 +61,7 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'calender',
     'djangocms_calender',
+	'staff',
 )
 
 MIDDLEWARE_CLASSES = (
