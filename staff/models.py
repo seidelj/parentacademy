@@ -5,6 +5,7 @@ from django.db import models
 class Staff(models.Model):
 	firstname = models.CharField("First Name", max_length=256)
 	lastname = models.CharField("Last Name", max_length=256)
+	about = models.TextField("About", null=True)
 	picture_url = models.CharField("Relative Picture URL", max_length=512)
 	publish = models.BooleanField("Publish", default=False) 
 	
