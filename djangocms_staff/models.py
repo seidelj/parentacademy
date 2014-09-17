@@ -7,6 +7,6 @@ class StaffPlugin(CMSPlugin):
     staff = models.ForeignKey(Staff)
 
     def __unicode__(self):
-        return self.staff._get_full_name
+        return self.staff.firstname
 
 

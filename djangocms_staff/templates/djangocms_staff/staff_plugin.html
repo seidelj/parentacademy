@@ -1,15 +1,20 @@
-something should be here
-{% for s in instance.staff %}
+{% load static %}
 <div class="row">
-	<div class="col-sm-9 col-xs-12">
+<div class="col-sm-9 col-xs-12">
+{% for s in staff %}
 		<div class="row">
 			<div class="col-sm-4">
-				<img style="width: 170px" src="{% static %}{{ s.picture_url }}"/>
+				<img style="width: 170px" src="{% static s.picture_url %}"/>
 			</div>
 			<div class="col-sm-8">
 				<h3>{{ s.full_name }}</h3>
 				<p>{{ s.about }}</p>
 			</div>
+		</div>
+			<br />
+{% endfor %}
+</div>
+	<div class="col-sm-3 hidden-xs">
+    	<img style="width: 200px" src="{% static 'website/img/Big-Half-Apple.png' %}"/>
 	</div>
 </div>
-{% endfor %}

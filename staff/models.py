@@ -13,7 +13,6 @@ class Staff(models.Model):
 		return "{} {}".format(self.firstname, self.lastname)
 	
 	full_name = property(_get_full_name)
-	
-	def __unicode__(self):
-		return self.full_name
 
+	def __unicode__(self):
+		return self.firstname
