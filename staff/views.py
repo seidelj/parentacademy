@@ -4,7 +4,6 @@ from staff.models import Staff
 
 def list_staff(request):
 	staff = Staff.objects.filter(publish=1)
-	print staff
 	context = { 'staff': staff, }
 	return render(request, 'staff/base.html', context)
 
