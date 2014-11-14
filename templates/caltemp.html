@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load static from staticfiles %}
+
+{% block title %}<title>About | Parent Academy</title>{% endblock %}
+{% block tagline%}{%endblock%}
+{% block base_content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 hidden-xs">
+            <img style="width: 200px" src="{% static 'website/img/Big-Half-Apple.png' %}"/>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
