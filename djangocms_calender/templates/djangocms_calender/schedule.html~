@@ -10,14 +10,14 @@
 		<tr class="active">
 		{% if noEvents %}<td>{{ message }}</td>{% else %}    
             		<td>Date</td>
-            		<td>Class</td>
+            		<td>Group</td>
             		<td>Time</td>
 		{% endif %}
         	</tr>
 		{% for event in events %}
         	<tr>
             		<td>{{ event.date|date:"l" }}, {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
-            		<td>{{ event.title }}</td>
+            		<td><font color="{{ event.color }}">{{ event.group }}</font></td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 		</tr>
 	{% endfor %}

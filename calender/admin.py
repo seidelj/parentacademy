@@ -7,13 +7,12 @@ from calender.models import Events
 class EventsAdmin(admin.ModelAdmin):
 	
 	fieldsets = [
-	    ("Event Information", {'fields': ['title', 'description']}),
-	    (None,		{'fields': ['campus']}),
+	    ("Event Information", {'fields': ['council', 'location', 'group', 'color']}),
 	    ("Date and Time",	{'fields': ['date', 'start', 'end']}),
 	]
 
-	list_display = ('title', 'date', 'campus')
-	list_filter = ['campus']
+	list_display = ('group', 'date', 'council')
+	list_filter = ['council']
 	date_hierarchy = 'date'
 
 admin.site.register(Events, EventsAdmin)
