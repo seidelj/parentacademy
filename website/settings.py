@@ -163,9 +163,8 @@ TEMPLATE_DIRS = (
 CMS_TEMPLATES = (
     ('home.html', "Home Page"),
     ('about.html', "General Info"),
-    ('schedule_camden.html', "Camden Schedule"),
-    ('schedule_middlesbrough.html', "Middlesbrough Schedule"),
     ('directors.html', "Directors"),
+	('caltemp.html', "Calender"),
 )
 
 LANGUAGES = [
