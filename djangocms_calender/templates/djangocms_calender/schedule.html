@@ -10,6 +10,7 @@
 		<tr class="active">
 		{% if noEvents %}<td>{{ message }}</td>{% else %}    
             		<td>Date</td>
+					<td>School</td>
             		<td>Group</td>
             		<td>Time</td>
 					<td>Location</td>
@@ -18,6 +19,7 @@
 		{% for event in events %}
         	<tr>
             		<td>{{ event.eventdate|date:"l" }}, {{ event.eventdate|date:"d" }} {{ event.eventdate|date:"F" }}</td>
+					<td>{{ event.school }}</td>
             		<td><font color="{{ event.color }}">{{ event.group }}</font></td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 					<td>{{ event.location }}</td>

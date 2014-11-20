@@ -18,11 +18,12 @@ def migrate_events(csvfile):
 			council = row[0][0].lower()
 			group = row[1]
 			color = get_color(row[2])
+			school = row[3]
 			location = row[4]
 			eventdate = convert_date(str(row[5]))
 			start = str(datetime.strptime(row[6],"%I:%M:%S %p")).replace('1900-01-01 ',"")
 			end = str(datetime.strptime(row[7], "%I:%M:%S %p")).replace("1900-01-01 ",'')
-			event, created = Events.objects.get_or_create(council=council, group=group, color=color, location=location, eventdate=eventdate, start=start, end=end)
+			event, created = Events.objects.get_or_create(council=council, group=group, color=color, school=school, location=location, eventdate=eventdate, start=start, end=end)
 
 def get_color(item):
 	colors = {}

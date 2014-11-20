@@ -24,7 +24,7 @@ class Events(models.Model):
 	eventdate = models.DateField("Date")
 	start = models.TimeField("Start Time")
 	end = models.TimeField("End Time")
-	title = models.CharField("Event Title", max_length=256)
+	school = models.CharField("school", max_length=256)
 	location = models.TextField("Event Location")
 	group = models.CharField(max_length=128, choices=GROUP_CHOICES)
 	color = models.CharField(max_length=128, choices=COLOR_CHOICES)
