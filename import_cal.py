@@ -34,7 +34,7 @@ def get_color(item):
 
 def convert_date(dateString):
 	splits = dateString.split('/')
-	return D.date(int(splits[2]), int(splits[0]), int(splits[1]))
+	return D.date(int(splits[2])+2000, int(splits[0]), int(splits[1]))
 
 if __name__ == "__main__":
 	main()

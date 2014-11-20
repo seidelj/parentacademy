@@ -3,7 +3,7 @@
     	<span class="schedule-header">Schedule</span>
     	<hr style="margin-top: 0px; margin-bottom: 7px; border: none; height: 2px; color: #505052; background-color:#505052;">
     	<div class="colorbanner" style={% if name == 'Camden' %}"background-color:#1ca6bc"{% else %}background-color:#87be62;{% endif %}">
-        	<p>{{ events.0.date|date:"Y" }}&nbsp;<a href="/calender/{{ campus }}/87be62/">Green</a>&nbsp;<a href="/calender/{{ campus }}/1ca6bc">Blue</a>&nbsp;<a href="/calender/{{ campus }}/ef4a2d/">Red</a>&nbsp;<a href="/calender/{{ campus }}/f99e35/">Orange</a></p>
+        	<p>{{ events.0.date|date:"Y" }}&nbsp;<a href="/calender/{{ campus }}/87be62/">Green</a>&nbsp;<a href="/calender/{{ campus }}/1ca6bc/">Blue</a>&nbsp;<a href="/calender/{{ campus }}/ef4a2d/">Red</a>&nbsp;<a href="/calender/{{ campus }}/f99e35/">Orange</a></p>
     	</div>
     	<div class="table-responsive">
     		<table class="table table-hover">   	
@@ -17,7 +17,7 @@
         	</tr>
 		{% for event in events %}
         	<tr>
-            		<td>{{ event.date|date:"l" }}, {{ event.date|date:"d" }} {{ event.date|date:"F" }}</td>
+            		<td>{{ event.eventdate|date:"l" }}, {{ event.eventdate|date:"d" }} {{ event.eventdate|date:"F" }}</td>
             		<td><font color="{{ event.color }}">{{ event.group }}</font></td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 					<td>{{ event.location }}</td>
