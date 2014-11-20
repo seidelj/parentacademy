@@ -21,9 +21,9 @@ class Events(models.Model):
 	)
 	
 	council = models.CharField(max_length=3, choices=CAMPUS_CHOICES)
-	date = models.DateField("Date")
-	start = models.CharField("Start Time", max_length=128)
-	end = models.CharField("End Time", max_length=128)
+	eventdate = models.DateField("Date")
+	start = models.TimeField("Start Time")
+	end = models.TimeField("End Time")
 	title = models.CharField("Event Title", max_length=256)
 	location = models.TextField("Event Location")
 	group = models.CharField(max_length=128, choices=GROUP_CHOICES)

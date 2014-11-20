@@ -8,11 +8,11 @@ class EventsAdmin(admin.ModelAdmin):
 	
 	fieldsets = [
 	    ("Event Information", {'fields': ['council', 'location', 'group', 'color']}),
-	    ("Date and Time",	{'fields': ['date', 'start', 'end']}),
+	    ("Date and Time",	{'fields': ['eventdate', 'start', 'end']}),
 	]
 
-	list_display = ('group', 'date', 'council')
+	list_display = ('group', 'eventdate', 'council')
 	list_filter = ['council']
-	date_hierarchy = 'date'
+	date_hierarchy = 'eventdate'
 
 admin.site.register(Events, EventsAdmin)
