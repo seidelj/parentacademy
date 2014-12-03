@@ -60,7 +60,7 @@ INSTALLED_APPS = (
     'djangocms_link',
     'djangocms_snippet',
     'calender',
-    'djangocms_calender',
+#    'djangocms_calender',
 	'staff',
 	'djangocms_staff',
 )

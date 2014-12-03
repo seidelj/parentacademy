@@ -30,9 +30,21 @@ class Events(models.Model):
 	color = models.CharField(max_length=128, choices=COLOR_CHOICES)
 	
 	def __unicode__(self):
-		return self.title
+		return self.school
 
 	class Meta:
 		verbose_name = 'Event'	
 		verbose_name_plural = "Events"
 
+
+
+# Create your models here.
+# THIS IS SOME CMS STUFF
+
+class CalenderPlugin(CMSPlugin):
+	events = models.ForeignKey(Events)
+
+	def __unicode__(self):
+		return self.events.school
+
+	

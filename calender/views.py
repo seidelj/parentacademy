@@ -15,7 +15,6 @@ def schedule(request, campus):
 	noEvents = True if not events_list else False
 	paginator = Paginator(events_list, 10)
 	page = request.GET.get('page')
-	print page
 	try:
 		events = paginator.page(page)
 	except PageNotAnInteger:
@@ -23,9 +22,9 @@ def schedule(request, campus):
 	except EmptyPage:
 		events = paginator.page(paginator.num_pages)
 
-	context = { 'events': events, 'noEvents': noEvents, 'message': message, 'name': name, 'campus': campus, }
-	print page
-	return render_to_response('calender/base.html', context, context_instance=RequestContext(request))
+	context = { 'events': events, 'noEvents': noEvents, 'message': message, 'name': name, 'campus': campus, 'events_list': events_list }
+
+	return render(request, 'calender/base.html', context)
 
 def schedule_group(request, campus, color):
 	message = "No upcoming event"
@@ -43,6 +42,6 @@ def schedule_group(request, campus, color):
 	except EmptyPage:
 		events = paginator.page(paginator.num_pages)
 
-	context = { 'events': events, 'noEvents': noEvents, 'message': message, 'name': name, 'campus': campus }
-	return render_to_response('calender/base.html', context, context_instance=RequestContext(request))
+	context = { 'events': events, 'noEvents': noEvents, 'message': message, 'name': name, 'campus': campus, 'events_list': events_list }
+	return render(request, 'calender/base.html', context)
 
