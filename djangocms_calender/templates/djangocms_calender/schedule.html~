@@ -3,13 +3,20 @@
     	<span class="schedule-header">Schedule</span>
     	<hr style="margin-top: 0px; margin-bottom: 7px; border: none; height: 2px; color: #505052; background-color:#505052;">
     	<div class="colorbanner" style={% if name == 'Camden' %}"background-color:#1ca6bc"{% else %}background-color:#87be62;{% endif %}">
-        	<p>{{ events.0.eventdate|date:"Y" }}&nbsp;<a href="/calender/{{ campus }}/87be62/">Green</a>&nbsp;<a href="/calender/{{ campus }}/1ca6bc/">Blue</a>&nbsp;<a href="/calender/{{ campus }}/ef4a2d/">Red</a>&nbsp;<a href="/calender/{{ campus }}/f99e35/">Orange</a></p>
+        	<p>{{ events.0.eventdate|date:"Y" }}
+
+			<a style="color:#ffffff;" href="/calender/{{ campus }}/87be62">Green</a>
+			<a style="color:#ffffff;" href="/calender/{{ campus }}/1ca6bc">Blue</a>
+			<a style="color:#ffffff;" href="/calender/{{ campus }}/ef4a2d">Red</a>
+			<a style="color:#ffffff;" href="/calender/{{ campus }}/f99e35">Orange</a>
+			</p>
     	</div>
     	<div class="table-responsive">
     		<table class="table table-hover">   	
 		<tr class="active">
 		{% if noEvents %}<td>{{ message }}</td>{% else %}    
             		<td>Date</td>
+					<td>School</td>
             		<td>Group</td>
             		<td>Time</td>
 					<td>Location</td>
@@ -18,12 +25,25 @@
 		{% for event in events %}
         	<tr>
             		<td>{{ event.eventdate|date:"l" }}, {{ event.eventdate|date:"d" }} {{ event.eventdate|date:"F" }}</td>
+					<td>{{ event.school }}</td>
             		<td><font color="{{ event.color }}">{{ event.group }}</font></td>
             		<td>{{ event.start }} - {{ event.end }}</td>
 					<td>{{ event.location }}</td>
 		</tr>
 	{% endfor %}
     		</table>
+	
+	<ul class="pager">
+		{% if events.has_previous %}
+			<li><a href="?page={{ events.previous_page_number }}">Previous</a></li>
+		{% endif %}
+	
+			<li>Page {{ events.number }} of {{ events.paginator.num_pages }}</li>
 
+		{% if events.has_next %}
+			<li><a href="?page={{ events.next_page_number }}">Next</a></li>
+		{% endif %}
+	</ul>
+	
 	</div>
 </div>

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
 
-title>{% page_attribute "page_title" %}</title>
 {% block base_content %}
 <div class="container">
 {% block calender_content %}

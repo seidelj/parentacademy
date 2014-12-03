@@ -1,4 +1,5 @@
-{% load cms_tags sekizai_tags %}
+{% load cms_tags %}
+{% load sekizai_tags %}
 {% load static from staticfiles %}
 <html>
   <head>
@@ -6,9 +7,9 @@
       <title>{% page_attribute "page_title" %}</title>
 	  <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap.min.css' %}"/>
-      <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap-responsive.min.css' %}"/>
-	 <link rel="stylesheet" href="{% static 'website/css/style.css' %}"/>
+{% addtoblock "css" %}<link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap.min.css' %}"/>{% endaddtoblock %}
+<!--    <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap-responsive.min.css' %}"/> -->
+{% addtoblock "css"	%}<link rel="stylesheet" href="{% static 'website/css/style.css' %}"/>{% endaddtoblock %}
 
 	  
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -100,9 +101,9 @@
        </div>
 	
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>					
-	<script language="javascript" type="text/javascript" src="{% static 'website/bootstrap/js/bootstrap.min.js' %}"
-/></script>
+{% addtoblock "js" %}<script src="https://code.jquery.com/jquery.js"></script>{% endaddtoblock %}					
+{% addtoblock "js" %}<script language="javascript" type="text/javascript" src="{% static 'website/bootstrap/js/bootstrap.min.js' %}"
+/></script>{% endaddtoblock %}
 
       {% render_block "js" %}
   </body>
