@@ -63,6 +63,8 @@ INSTALLED_APPS = (
 #    'djangocms_calender',
 	'staff',
 	'djangocms_staff',
+	'people',
+	's3direct',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -170,3 +172,14 @@ CMS_TEMPLATES = (
 LANGUAGES = [
 	('en', 'English'),
 ]    
+
+# AWS keys
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY','')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID','')
+AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_BUCKET_NAME",'')
+
+S3DIRECT_REGION = "us-east-1"
+
+S3DIRECT_DESTINATIONS = {	
+	'imgs': ('imgs', lambda u: True, ['image/jpeg', 'image/png'],),
+}

@@ -9,6 +9,7 @@ urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^calender/', include('calender.urls', namespace='calender')),
 	url(r'^staff/', include('staff.urls', namespace = 'staff')),
+	url(r'^s3direct/', include('s3direct.urls')),
     url(r'^', include('cms.urls')),
 )
 
