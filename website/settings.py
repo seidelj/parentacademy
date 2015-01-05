@@ -167,7 +167,9 @@ CMS_TEMPLATES = (
     ('about.html', "General Info"),
     ('directors.html', "Directors"),
 	('caltemp.html', "Calender"),
+	('peopletemp.html', "People"),
 )
+
 
 LANGUAGES = [
 	('en', 'English'),
